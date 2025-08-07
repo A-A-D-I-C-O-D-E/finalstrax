@@ -1,0 +1,186 @@
+
+
+
+.spotlight-container {
+  width: 100%;
+  height: 190vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Image */
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/billboard.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Background Video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 190vh;
+  object-fit: cover;
+  z-index: 3;
+  pointer-events: none;
+  filter: brightness(1.5);
+}
+
+/* Spotlight hover mask */
+.mask-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(circle 150px at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  mix-blend-mode: destination-out;
+}
+
+/* Video mask container */
+.video-mask-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Overlay section */
+.overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+/* Hero Text Section */
+.content {
+  max-width: 50%;
+  z-index: 4;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.content button {
+  background: linear-gradient(to right, #ff9a8b, #ff6a88);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.content button:hover {
+  transform: scale(1.05);
+}
+
+/* Hover Images on Left & Right */
+
+.hover-image-right {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-60%);
+  width: 600px;
+  transition: opacity 0.9s ease;
+  opacity: 0.1;
+  filter: brightness(60%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+
+.hover-image-right {
+  right: 30px;
+}
+
+/* Show image on hover */
+.hover-visible {
+  opacity: 0.6 !important;
+}
+
+/* Scrollable Section */
+.demo-section {
+  width: 100%;
+
+  padding: 4rem 2rem;
+  background: transparent;
+  background: none;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  z-index: -6;
+  /* box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.5); */
+}
+
+/* Centered Demo Video */
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overlay {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .hover-image-left,
+  .hover-image-right {
+    display: none;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .demo-section {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 2rem 1rem;
+  }
+
+  .demo-video-container {
+    border-radius: 20px;
+  }
+}
