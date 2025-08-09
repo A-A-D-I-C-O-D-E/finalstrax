@@ -5,7 +5,7 @@ import dow3 from '../assets/download (3).png' ;
 import viddd from '../assets/ghnti.mp4'
 const UnmatchedProductivity: React.FC = () => {
   return (
-    <div className="bg-gradient-to-b from-[#f2f4f8] to-white text-black font-['Inter'] mt-20">
+    <div className="bg-gradient-to-b from-[#f2f4f8] to-white text-black font-['Inter'] -mt-80 md:-mt-0">
       <div className="px-6 md:px-8 py-16 max-w-[1200px] mx-auto pb-20 py-20">
         <h1 className="text-5xl md:text-6xl font-bold mb-6  mt-20">Unmatched productivity</h1>
         <p className="text-xl fond-bold text-[#444] max-w-[1000px] mb-12">

@@ -16,77 +16,93 @@ const WorkTogether: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#f8f8f8] overflow-hidden text-black font-['Inter'] w-full">
-      {/* Background Video */}
+   <section className="relative w-full h-auto text-black bg-black/10 overflow-hidden item-center">
+      {/* Background video */}
       <video
-        ref={backgroundVideoRef}
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute  w-full h-full object-cover "
+        src={bgVideo}
         autoPlay
         muted
         loop
         playsInline
-      >
-        <source src={bgVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      ></video>
 
-      {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 flex flex-col items-center text-center">
+      {/* Overlay for better text contrast */}
+   
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto px-4 py-16 text-center">
         {/* Heading */}
-        <h1 className="text-[36px] sm:text-[48px] md:text-[56px] font-bold leading-tight mb-6">
-          Work together.<br />Like in the office.
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          Work together. <br /> Like in the office.
         </h1>
-
-        {/* Subtext */}
-        <p className="text-lg text-[#444] font-semibold max-w-[700px] mb-10">
-          Create customized virtual office spaces for any department or event with high quality audio and video conferencing.
+        <p className="mt-4 text-black/6 max-w-2xl mx-auto text-lg mb-10">
+          Create customized virtual office spaces for any department or event
+          with high quality audio and video conferencing.
         </p>
 
-        {/* Center Video (call) */}
-        <div className="relative left-20 top-3 w-full max-w-5xl rounded-[20px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.25)] mb-20 mt-7">
-          <video
-            ref={centerVideoRef}
-            className="w-full h-auto"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src={centerVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        {/* Center video box */}
+        <div className=" flex justify-center -mb-4">
+          <div className=" rounded-lg overflow-hidden max-w-4xl w-full">
+            <video
+              // className="w-full h-auto"
+              src={centerVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+            style={{ width: '80%', marginLeft:'17%', height:'100%', marginTop:'5px', borderRadius: '10px' }}
+            
+            ></video>
+          </div>
         </div>
 
-        {/* Description Below Video */}
-        <p className="text-base top-5 text-2xl font-bold max-w-[800px] mb-20">
-          Collaborating with remote teams is easy in your virtual office environment. Enjoy real-time communication within your workspace without additional software hassle.
+        {/* Sub description */}
+        <p className="mt-6 font-semibold text-lg max-w-3xl mx-auto">
+          Collaborating with remote teams is easy in your virtual office
+          environment. Enjoy real-time communication within your workspace
+          without additional software hassle.
         </p>
 
         {/* Features */}
-        <div className="flex flex-wrap justify-center gap-12 w-full max-w-5xl">
-          {/* Feature 1 */}
-          <div className="w-[260px] text-center">
-            <img src={iconCustomize} alt="Customize workspace" className="w-10 h-10 mx-auto mb-3" />
-            <h3 className="text-lg font-bold mb-2">Customize workspace</h3>
-            <p className="text-[#444] font-medium">
-              Create your own offices and meeting rooms to suit your team’s needs.
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-200">
+          <div>
+            <div className="flex justify-center mb-3">
+              <div className="w-10 h-10 bg-blue-500 rounded-md">
+
+                 <img src={iconCustomize} alt="Invite guests" className="w-10 h-10 mx-auto mb-3" />
+              </div>
+               
+            </div>
+            
+            <h3 className="font-bold text-black">Customize workspace</h3>
+            <p className="mt-2 text-gray-600">
+              Create your own offices and meeting rooms to suit your team’s
+              needs.
             </p>
           </div>
-
-          {/* Feature 2 */}
-          <div className="w-[260px] text-center">
-            <img src={iconAudioVideo} alt="Audio and video calls" className="w-10 h-10 mx-auto mb-3" />
-            <h3 className="text-lg font-bold mb-2">Audio and video calls</h3>
-            <p className="text-[#444] font-medium">
-              Collaborate efficiently and seamlessly with high quality virtual conferencing.
+          <div>
+            <div className="flex justify-center mb-3">
+              <div className="w-10 h-10 bg-blue-400 rounded-md">
+                     <img src={iconAudioVideo} alt="Invite guests" className="w-10 h-10 mx-auto mb-3" />
+              </div>
+           
+            </div>
+            <h3 className="font-bold text-black">Audio and video calls</h3>
+            <p className="mt-2 text-gray-600">
+              Collaborate efficiently and seamlessly with high quality virtual
+              conferencing.
             </p>
           </div>
+          <div>
+            <div className="flex justify-center mb-3">
+              <div className="w-10 h-10 bg-blue-300 rounded-full">
+                 <img src={iconInvite} alt="Invite guests" className="w-10 h-10 mx-auto mb-3" />
 
-          {/* Feature 3 */}
-          <div className="w-[260px] text-center">
-            <img src={iconInvite} alt="Invite guests" className="w-10 h-10 mx-auto mb-3" />
-            <h3 className="text-lg font-bold mb-2">Invite guests</h3>
-            <p className="text-[#444] font-medium">
+              </div>
+               
+            </div>
+            <h3 className="font-bold text-black">Invite guests</h3>
+            <p className="mt-2 text-gray-600">
               Meet with guests without ever needing to leave your workspace.
             </p>
           </div>
