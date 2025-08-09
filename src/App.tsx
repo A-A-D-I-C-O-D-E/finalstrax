@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
     <WorkTogether/>
     <GitHubSync/>
     <StickyScrollSection/>
-    <HeroSection/>
+  
     </>
   );
 };
