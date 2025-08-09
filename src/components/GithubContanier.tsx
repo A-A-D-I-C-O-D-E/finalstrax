@@ -27,10 +27,10 @@ const GitHubSync: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden text-white px-4 py-12 sm:py-16 bg-[#111]">
+    <section className="relative w-full overflow-hidden text-white px-4 py-12 sm:py-16 bg-[#111] ">
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="absolute top-60 md:h-full h-auto md:top-13 left-0 w-full object-cover z-0 flex  items-center"
         autoPlay
         muted
         loop
@@ -41,7 +41,6 @@ const GitHubSync: React.FC = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70 z-0" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -69,7 +68,7 @@ const GitHubSync: React.FC = () => {
 
         {/* GitHub Video */}
         <motion.div
-          className="relative mb-16 sm:mb-20 max-w-5xl mx-auto"
+          className="relative mb-8 sm:mb-20 md:max-w-5xl max-w-xl  mx-auto"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.3 }}
@@ -77,7 +76,7 @@ const GitHubSync: React.FC = () => {
         >
           <video
             ref={videoRef}
-            className="relative rounded-2xl z-10 w-full shadow-lg"
+            className="relative rounded-2xl z-10 -top-6 md:top-40 md:ml-0 ml-1 w-25  h-25  md:h-full md:w-full shadow-lg "
             autoPlay
             loop
             muted
@@ -89,7 +88,7 @@ const GitHubSync: React.FC = () => {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 ">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}

@@ -8,8 +8,9 @@ import UnmatchedProductivity from "./components/SpotlightVideo";
 import WorkTogether from "./components/HeroContent";
 import GitHubSync from "./components/GithubContanier";
 import StickyScrollSection from "./components/ScrollingSection";
+import HeroSection from "./components/Footer";
 
-const HeroSection: React.FC = () => {
+const App: React.FC = () => {
   const spotlightRef = useRef<HTMLDivElement | null>(null);
   const rightImageRef = useRef<HTMLImageElement | null>(null);
 
@@ -69,9 +70,9 @@ const HeroSection: React.FC = () => {
     <WorkTogether/>
     <GitHubSync/>
     <StickyScrollSection/>
-  
+      <HeroSection/>
     </>
   );
 };
 
-export default HeroSection;
+export default App;
