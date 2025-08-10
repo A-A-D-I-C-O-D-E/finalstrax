@@ -6,8 +6,9 @@ import rightImage from "../assets/hero21.png"; // Hover image
 
 import UnmatchedProductivity from "../components/SpotlightVideo";
 import WorkTogether from "../components/HeroContent";
-import GitHubSync from "../components/GithubContanier";
+
 import StickyScrollSection from "../components/ScrollingSection";
+import AIConsultancy from "../components/GithubContanier";
 
 
 
@@ -53,8 +54,8 @@ const Home: React.FC = () => {
       {/* Content */}
       <div className="hero-content">
         <div className="text-side">
-          <h1>Everything App<br />for your teams</h1>
-          <p>Huly, an open-source platform, serves as an all-in-one replacement of Linear, Jira, Slack, and Notion.</p>
+          <h1>Everything <br />for your Bussiness</h1>
+          <p>Startxel, an open-source platform, serves as an all-in-one replacement of Linear, Jira, Slack, and Notion.</p>
           <button>SEE IN ACTION →</button>
         </div>
         <div className="image-side hidden md:block" >
@@ -70,7 +71,7 @@ const Home: React.FC = () => {
     <UnmatchedProductivity/>
     <WorkTogether/>
     
-    <GitHubSync/>
+    <AIConsultancy/>
     <StickyScrollSection/>
     
 

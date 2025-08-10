@@ -1,43 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import bgImage from '../assets/fjdf.png'
-import bgI from '../assets/hero-illustration.7100a376.jpg'
+
 
 // ServicePage.tsx
 // Tailwind + small scoped CSS for glow animations
 
-const services = [
-  {
-    title: "IT Services",
-    desc: "Enterprise-grade infrastructure, cloud migration, managed support, DevOps & SRE.",
-    icon: "🖥️",
-  },
-  {
-    title: "AI Consultancy",
-    desc: "Strategy, model prototyping, MLOps, LLM integrations and productionization.",
-    icon: "🤖",
-  },
-  {
-    title: "Business Consulting",
-    desc: "Product strategy, GTM, process automation and digital transformation.",
-    icon: "📈",
-  },
-  {
-    title: "Custom Software",
-    desc: "Full-stack product engineering — web, mobile, backend and APIs.",
-    icon: "⚙️",
-  },
-  {
-    title: "Security & Compliance",
-    desc: "Pen testing, audits, compliance readiness and incident response.",
-    icon: "🔒",
-  },
-  {
-    title: "Data Engineering",
-    desc: "Pipelines, analytics, data warehouses and realtime streaming.",
-    icon: "📊",
-  },
-];
+
 
 export default function ServicePage() {
   return (
@@ -161,30 +129,4 @@ export default function ServicePage() {
   );
 }
 
-function ServiceCard({ title, desc, icon, index }: any) {
-  return (
-    <div className={`glow-border rounded-2xl reveal delay-${index % 5}  bg-cover bg-center `}
-      style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="relative bg-gradient-to-b from-slate-900/70 to-slate-800/60 p-6 rounded-2xl border border-slate-700/30 shadow-lg">
-        <div className="flex items-start gap-4">
-          <div className="text-2xl bg-slate-800/40 rounded-lg w-12 h-12 flex items-center justify-center text-white/90">{icon}</div>
-          <div>
-            <h4 className="text-lg font-semibold">{title}</h4>
-            <p className="mt-1 text-sm text-slate-300/90">{desc}</p>
 
-            <div className="mt-4 flex gap-3 flex-wrap">
-              <span className="px-3 py-1 rounded-full bg-slate-800/30 border border-slate-700/20 text-xs">Consulting</span>
-              <span className="px-3 py-1 rounded-full bg-slate-800/30 border border-slate-700/20 text-xs">Strategy</span>
-              <span className="px-3 py-1 rounded-full bg-slate-800/30 border border-slate-700/20 text-xs">Implementation</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-6 flex items-center justify-between">
-          <div className="text-xs text-slate-400">Learn more</div>
-          <div className="text-sm text-slate-300/90">→</div>
-        </div>
-      </div>
-    </div>
-  );
-}

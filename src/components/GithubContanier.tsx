@@ -1,25 +1,53 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import githubVideo from '../assets/interface-github(2)_a5ea456e.mp4';
+
+// Replace these with relevant AI/consultancy videos/images
+
+
+
+import aiConsultVideo from '../assets/interface-github(2)_a5ea456e.mp4';
 import bgv from '../assets/Everything App for your teams (4).mp4';
 
-import iconSync from '../assets/two.svg';
-import iconPrivate from '../assets/private.svg';
-import iconRepos from '../assets/multiple.svg';
-import iconMilestone from '../assets/milestone.svg';
-import iconTrack from '../assets/track.svg';
-import iconFilter from '../assets/advance.svg';
-
+import iconStrategy from '../assets/two.svg';
+import iconAutomation from '../assets/private.svg';
+import iconCloud from '../assets/multiple.svg';
+import iconAnalytics from '../assets/milestone.svg';
+import iconSecurity from '../assets/track.svg';
+import iconSupport from '../assets/advance.svg';
 const features = [
-  { icon: iconSync, title: 'Two-way synchronization', desc: 'Sync tasks and issues seamlessly in both directions.' },
-  { icon: iconPrivate, title: 'Private tasks', desc: 'Keep sensitive tasks private from GitHub visibility.' },
-  { icon: iconRepos, title: 'Multiple repositories', desc: 'Link and manage across multiple GitHub repositories.' },
-  { icon: iconMilestone, title: 'Milestone migration', desc: 'Carry over milestones and due dates easily.' },
-  { icon: iconTrack, title: 'Track progress', desc: 'Visualize issue and task completion across teams.' },
-  { icon: iconFilter, title: 'Advanced filtering', desc: 'Sort by label, assignee, milestone and more.' },
+  {
+    icon: iconStrategy,
+    title: 'AI Strategy & Roadmap',
+    desc: 'Design a clear AI adoption plan tailored to your business goals for maximum ROI.'
+  },
+  {
+    icon: iconAutomation,
+    title: 'Business Process Automation',
+    desc: 'Leverage AI to streamline workflows, reduce manual work, and improve efficiency.'
+  },
+  {
+    icon: iconCloud,
+    title: 'Cloud-based IT Solutions',
+    desc: 'Implement scalable and secure cloud systems that grow with your business.'
+  },
+  {
+    icon: iconAnalytics,
+    title: 'Data Analytics & Insights',
+    desc: 'Turn raw data into actionable insights for smarter decision-making.'
+  },
+  {
+    icon: iconSecurity,
+    title: 'AI-driven Cybersecurity',
+    desc: 'Protect your digital assets with advanced AI-powered security systems.'
+  },
+  {
+    icon: iconSupport,
+    title: 'Continuous Growth Support',
+    desc: 'Receive ongoing consultancy and optimization for long-term success.'
+  },
 ];
 
-const GitHubSync: React.FC = () => {
+const AIConsultancy: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -27,10 +55,10 @@ const GitHubSync: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden text-white px-4 py-12 sm:py-16 bg-[#111] ">
+    <section className="relative w-full overflow-hidden text-white px-4 py-12 sm:py-16 bg-[#111]">
       {/* Background Video */}
       <video
-        className="absolute top-60 md:h-full h-auto md:top-13 left-0 w-full object-cover z-0 flex  items-center"
+        className="absolute top-60  h-auto left-0 w-full object-fit z-0 bg-center bg-cover p:0 md:p-20"
         autoPlay
         muted
         loop
@@ -39,8 +67,6 @@ const GitHubSync: React.FC = () => {
         <source src={bgv} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
-      {/* Overlay */}
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -52,7 +78,7 @@ const GitHubSync: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Sync with GitHub.<br />Both ways.
+          AI Consultancy.<br /> Your Growth Partner.
         </motion.h2>
 
         {/* Subheading */}
@@ -63,12 +89,12 @@ const GitHubSync: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Manage products effortlessly with two-way GitHub synchronization. Automatically sync issues, pull requests, and milestones with Vmake-based GitHub Projects.
+          Startxel’s AI consultancy team helps you harness the power of artificial intelligence, automation, and modern IT solutions to drive measurable business growth.
         </motion.p>
 
-        {/* GitHub Video */}
+        {/* AI Consultancy Video */}
         <motion.div
-          className="relative mb-8 sm:mb-20 md:max-w-5xl max-w-xl  mx-auto"
+          className="relative mb-5 sm:mb-20 md:max-w-5xl max-w-lg mx-auto"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.3 }}
@@ -76,23 +102,24 @@ const GitHubSync: React.FC = () => {
         >
           <video
             ref={videoRef}
-            className="relative rounded-2xl z-10 -top-6 md:top-40 md:ml-0 ml-1 w-25  h-25  md:h-full md:w-full shadow-lg "
+            className="relative rounded-4xl z-10 -top-6 md:top-40 w-full p-10  md:p-20"
+            
             autoPlay
             loop
             muted
             playsInline
           >
-            <source src={githubVideo} type="video/mp4" />
+            <source src={aiConsultVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 p-0 md:p-20">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
-              className="text-center sm:text-left bg-white/5 p-6 rounded-xl hover:bg-white/10 transition"
+              className="text-center sm:text-left bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-slate-700/30 shadow-lg glow-border"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: idx * 0.15 }}
@@ -113,4 +140,4 @@ const GitHubSync: React.FC = () => {
   );
 };
 
-export default GitHubSync;
+export default AIConsultancy;

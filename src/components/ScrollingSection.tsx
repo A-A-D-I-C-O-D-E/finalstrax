@@ -6,34 +6,34 @@ import t2 from "../assets/billboard.a71a6e72.jpg";
 export default function StickyScrollSection() {
   const sections = [
     {
-      title: "Knowledge at Your Fingertips",
+      title: "Empowering Businesses with Digital IT Solutions",
       desc1:
-        "Huly offers a wide range of features to create and manage your project documentation. Huly's suite of collaborative editing tools boosts team efficiency.",
+        "Startxel delivers cutting-edge IT solutions tailored to your industry needs, helping you optimize workflows, boost productivity, and scale operations with ease.",
       desc2:
-        "Documents in Huly can be used for sharing reference materials among team members, collaborating on plans and roadmaps, storing meeting notes and assigning action items.",
+        "From custom software to enterprise integrations, our technology experts ensure seamless digital transformation and provide continuous support to keep your business running at peak efficiency.",
       img: t2,
     },
     {
-      title: "Rich Formatting",
+      title: "AI-Powered Consultancy",
       desc1:
-        "Documents can be enhanced with rich text formatting, images, attachments, and code blocks. Use documents to organize team plans, create technical documentation, and support your team's progress towards shared goals.",
-      code: `interface User {
-  name: string;
-  age: number;
+        "Our AI consultancy services enable businesses to harness the power of machine learning and intelligent automation to make smarter decisions.",
+      code: `// Example AI prediction function
+interface PredictionInput {
+  customerData: object;
 }
 
-const users: User[] = [
-  { name: "Alice", age: 30 },
-  { name: "Bob", age: 22 },
-];
+function runAIPrediction(input: PredictionInput) {
+  // Simulated AI prediction
+  return { successProbability: 0.92, recommendation: "Proceed with deal" };
+}
 
-const findUser = (name: string): User | undefined =>
-  users.find(user => user.name === name);`,
+const result = runAIPrediction({ customerData: { age: 32, spending: "high" } });
+console.log(result);`,
     },
     {
-      title: "Version History",
+      title: "End-to-End Digital Assistance",
       desc1:
-        "Track every edit effortlessly, and never lose a single change.",
+        "We provide 24/7 digital support for all your IT infrastructure and business tools, ensuring smooth operations and rapid problem resolution.",
     },
   ];
 
@@ -43,14 +43,14 @@ const findUser = (name: string): User | undefined =>
       <div className="md:w-1/3 w-full md:h-screen md:sticky top-0 flex items-center justify-center p-6">
         <div className="p-6 shadow-xl rounded-2xl bg-white max-w-xs w-full text-center">
           <img
-            src="https://source.unsplash.com/400x400/?technology,teamwork"
+            src="https://source.unsplash.com/400x400/?technology,teamwork,ai"
             alt="Collaboration"
             className="rounded-xl w-full h-80 object-cover"
           />
           <div className="mt-4">
-            <h3 className="text-xl font-bold text-gray-800">Collaborate</h3>
+            <h3 className="text-xl font-bold text-gray-800">Collaborate Smarter</h3>
             <p className="text-sm text-gray-500 mt-1">
-              Enhance teamwork with powerful real-time collaboration features.
+              Enhance teamwork and business growth with AI-powered solutions and real-time collaboration tools.
             </p>
           </div>
         </div>
