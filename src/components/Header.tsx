@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Star, Github, Menu, X } from "lucide-react";
+import { Link } from "react-router";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +19,11 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-white/80 hover:text-white transition-colors">
+            <Link to="/" className="text-white/80 hover:text-white transition-colors">
               Home
-            </a>
+            </Link>
             <div className="relative group">
-              <a href="#" className="text-white/80 hover:text-white transition-colors flex items-center">
+              <a href="https://www.stratxcel.ai/" className="text-white/80 hover:text-white transition-colors flex items-center">
                 AI Consultancy
                 <svg
                   className="w-4 h-4 ml-1"
@@ -40,7 +41,7 @@ const Header = () => {
               </a>
             </div>
             <div className="relative group">
-              <a href="#" className="text-white/80 hover:text-white transition-colors flex items-center">
+              <Link  to="/services" className="text-white/80 hover:text-white transition-colors flex items-center">
                 Services
                 <svg
                   className="w-4 h-4 ml-1"
@@ -55,11 +56,11 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
-            <a href="#" className="text-white/80 hover:text-white transition-colors">
+            <Link to="/contact" className="text-white/80 hover:text-white transition-colors">
               Contact Us
-            </a>
+            </Link>
           </nav>
 
           {/* Desktop Right Side Buttons */}
@@ -70,10 +71,14 @@ const Header = () => {
               <span>Star Us</span>
             </button>
             <button className="text-white/80 hover:text-white transition-colors px-3 py-1.5 border border-white/20 rounded hover:border-white/40">
+            <a href="https://www.stratxcel.ai/signin">
               SIGN IN
+              </a>
             </button>
             <button className="bg-white text-black px-3 py-1.5 rounded hover:bg-gray-200 transition-colors font-medium">
+                 <a href="https://www.stratxcel.ai/signin">
               SIGN UP
+              </a>
             </button>
           </div>
 
@@ -90,18 +95,18 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-black border-t border-white/10 px-6 py-4 space-y-4">
-          <a href="#" className="block text-white/80 hover:text-white transition-colors">
+          <Link to='/' className="block text-white/80 hover:text-white transition-colors">
             Home
-          </a>
-          <a href="#" className="block text-white/80 hover:text-white transition-colors">
+          </Link>
+          <a href="https://www.stratxcel.ai/" className="block text-white/80 hover:text-white transition-colors">
             AI Consultancy
           </a>
-          <a href="#" className="block text-white/80 hover:text-white transition-colors">
+          <Link  to="/services" className="block text-white/80 hover:text-white transition-colors">
             Services
-          </a>
-          <a href="#" className="block text-white/80 hover:text-white transition-colors">
+          </Link>
+          <Link to="/contact" className="block text-white/80 hover:text-white transition-colors">
             Contact Us
-          </a>
+          </Link>
           <hr className="border-white/10" />
           <div className="space-y-3">
             <button className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors w-full">
@@ -110,10 +115,14 @@ const Header = () => {
               <span>Star Us</span>
             </button>
             <button className="w-full text-white/80 hover:text-white transition-colors px-3 py-1.5 border border-white/20 rounded hover:border-white/40">
+               <a href="https://www.stratxcel.ai/signin">
               SIGN IN
+              </a>
             </button>
             <button className="w-full bg-white text-black px-3 py-1.5 rounded hover:bg-gray-200 transition-colors font-medium">
-              SIGN UP
+                 <a href="https://www.stratxcel.ai/signin">
+                 SIGN UP
+                 </a>
             </button>
           </div>
         </div>

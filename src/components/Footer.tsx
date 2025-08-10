@@ -5,6 +5,7 @@ import foo from '../assets/footer.jpg'; // Replace with actual video or image as
 
 export default function HeroSection() {
   return (
+    <>
     <section
       className="relative w-full min-h-screen bg-black text-white flex flex-col md:flex-row items-center justify-between px-1 md:px-20 py-16"
       style={{
@@ -53,6 +54,12 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
+
+     
     </section>
+      <footer className="py-8 text-center text-slate-400 bg-black">
+        © {new Date().getFullYear()} TrustingBrains — Crafted with ❤️
+      </footer>
+      </>
   );
 }
