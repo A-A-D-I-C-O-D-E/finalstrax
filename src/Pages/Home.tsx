@@ -9,6 +9,8 @@ import WorkTogether from "../components/HeroContent";
 
 import StickyScrollSection from "../components/ScrollingSection";
 import AIConsultancy from "../components/GithubContanier";
+import Header from "../components/Header";
+import HeroSection from "../components/Footer";
 
 
 
@@ -46,9 +48,14 @@ const Home: React.FC = () => {
   
     <section className="hero-section" onMouseEnter={showRightImage} onMouseLeave={hideRightImage}>
       {/* Background video */}
-      <video className="bg-video" autoPlay muted loop>
-        <source src={q} type="video/mp4" />
-      </video>
+      <video
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    autoPlay
+    muted
+    loop
+  >
+    <source src={q} type="video/mp4" />
+  </video>
       {/* <div className="mask-layer" ref={spotlightRef}></div> */}
 
       {/* Content */}
@@ -74,7 +81,6 @@ const Home: React.FC = () => {
     <AIConsultancy/>
     <StickyScrollSection/>
     
-
     </>
 
   );

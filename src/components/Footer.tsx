@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <>
     <section
-      className="relative w-full min-h-screen bg-black text-white flex flex-col md:flex-row items-center justify-between px-1 md:px-20 py-16"
+      className="relative w-full min-h-screen bg-black text-white flex flex-col md:flex-row items-center justify-between px-1 md:px-20 py-16 z-50"
       style={{
         backgroundImage: `url(${foo})`, // Use the imported image or video
         backgroundSize: 'cover',
